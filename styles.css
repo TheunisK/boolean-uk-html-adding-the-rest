@@ -9,7 +9,7 @@
 
   grid-template:
     "header header header" 70px
-    "left-menu main right-menu" 1fr /
+    "left-menu main right-menu" 3000px /
     300px 1fr 300px;
   gap: 20px;
   margin-left: 250px;
@@ -56,13 +56,13 @@
   grid-area: left-menu;
   display: grid;
   padding: 0px;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 600px 300px;
   gap: 20px
 }
 
 .main {
   grid-area: main;
-  grid-template-rows: 1.2fr 5fr;
+  grid-template-rows: 150px 1000px;
   display: grid;
   padding: 0px;
   gap: 20px;
@@ -71,7 +71,7 @@
 .right-menu {
   grid-area: right-menu;
   display: grid;
-  grid-template-rows: 2.5fr 1fr 0.75fr;
+  grid-template-rows: 500px 200px 200px;
   gap: 20px;
 }
 
