@@ -128,7 +128,7 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   padding: 5px;
-  gap: 2px;
+  gap: 5px;
 }
 .rightTop > div {
   border: dotted 1px green;
