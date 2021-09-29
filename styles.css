@@ -10,7 +10,7 @@
   grid-template:
     "header header header" 70px
     "left-menu main right-menu" 3000px /
-    300px 1fr 300px;
+    minmax(200px, 300px) minmax(300px, 1fr) minmax(200px, 300px);
   gap: 20px;
   margin-left: 250px;
   margin-right: 250px;
@@ -19,7 +19,7 @@
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 10fr 6fr;
+  grid-template-columns: minmax(78px, 1fr) 10fr 6fr;
   grid-area: header;
   background-color: #ffcc0057;
   gap: 10px;
@@ -31,7 +31,7 @@
 }
 .headerBox3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   padding: 5px;
   gap: 5px;
 }
@@ -42,7 +42,7 @@
 }
 .headerBox2 {
   display: grid;
-  grid-template-columns: 350px;
+  grid-template-columns: minmax(200px, 1.5fr) 2fr;
   gap: 5px;
   padding: 5px;
 }
@@ -91,7 +91,7 @@
 }
 .mainTop1 {
   display: grid;
-  grid-template-columns: 65px 1fr;
+  grid-template-columns: 63px 1fr;
   padding: 2px;
   gap: 2px;
 }
@@ -113,8 +113,8 @@
 .mainBottom {
   display: grid;
   grid-template-rows: 4fr 1fr;
-  padding: 10px;
-  gap: 10px;
+  padding: 5px;
+  gap: 5px;
 }
 .mainBottom > div {
   border: dotted 1px green;
@@ -126,7 +126,7 @@
 }
 .rightTop {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
   padding: 5px;
   gap: 5px;
 }
@@ -147,4 +147,24 @@
 .left-menuBox > div {
   display: grid;
   border: dotted 1px;
+}
+@media  screen and (max-width: 1200px) {
+  .container {
+    height: 100vh;
+  
+    display: grid;
+  
+    grid-template:
+      "header header header" 70px
+      "left-menu main main" 3000px /
+      minmax(200px, 300px) minmax(200px, 1fr) minmax(200px, 300px);
+    gap: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+  
+  }
+  .right-menu {
+    display: none;
+  }
+  
 }
